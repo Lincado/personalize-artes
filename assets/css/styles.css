@@ -1,0 +1,365 @@
+:root{
+    --spacing: 30rem;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --primary-color: #2C75fE;
+    --secondary-color: #fEcEE7;
+    --lavender-color: #e6e6fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/*elementos*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Caveat', cursive;
+}
+h1 {
+    font-size: 6rem;
+}
+h2 {
+    font-size: 5rem;
+}
+.section {
+    min-height: 100vh;
+    border-top: .5rem solid var(--primary-color);
+    border-bottom: .5rem solid var(--secondary-color);
+}
+.spacing-hg {
+    height: 8rem;
+}
+/*background*/
+.main-bg {
+    background-image: url(../img/fundo-aquarela-suave-em-azul-e-rosa_266878-70.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--white-color);
+}
+
+.lavender-bg {
+    background: var(--lavender-color);
+}
+/*font-color*/
+.font-color {
+    color: var(--primary-color);
+    text-shadow: 0.13rem 0.13rem var(--secondary-color);
+}
+/*menu nav bar*/
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 0.2rem solid var(--lavender-color);
+}
+
+.align-content {
+    max-width: 125rem;
+    margin: 0 auto;
+    padding: 10rem var(--gap);  
+    display: flex;
+    
+}
+.content-nav {
+    display: flex;
+    justify-content: space-between;   
+}
+
+.img-logo {
+    width: 16%;
+}
+
+.img-logo img{
+    max-width: 100%;
+    min-height: auto;
+}
+
+.nav-list {
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li {
+    list-style: none;
+    padding: 1.5rem; 
+    font-family: 'Caveat', cursive;   
+}
+
+.nav-list a {
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    transition: all 350ms ease-in-out;
+    width: 0;
+    height: 0.2rem;
+    background: var(--secondary-color);
+    bottom: 0rem;
+    left: 50%;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+    left: 2%;
+}
+
+/*Conteúdo da introdução*/
+
+.intro-content {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   align-items: center;
+   gap: var(--spacing);
+   min-height: 100vh;
+   width: 100%;
+}
+
+.intro-text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.intro-text h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.intro-text p {
+    text-transform: lowercase;
+    font-size: 4.5rem;
+}
+
+.img-intro img{
+    max-width: 100%;
+    min-height: auto;
+}
+
+.jobs-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.job-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.job-text{
+    display: flex;
+}
+
+.job-text h2{
+    font-size: 6.5rem;
+    text-align: center;
+    max-width: 100rem;
+    line-height: 0.9;
+}
+
+.jobs-img {
+    margin-top: 5rem;
+    box-shadow: 0.2rem 0.2rem 0.4rem var(--black-color);
+    overflow: hidden;
+    height: 40rem;
+    width: 40rem;
+    display: flex;
+    position: relative;
+}
+
+.gallery {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+    position: absolute;
+    
+}
+
+.gallery img{
+    width: 40rem;
+    height: 40rem;
+
+}
+
+/*Contato*/
+.contact {
+     min-height: 100vh;
+}
+
+.contact ul {
+    font-size: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact li {
+    list-style: none;
+    padding: 1.5rem; 
+    font-family: 'Caveat', cursive;   
+}
+
+.contact a {
+    text-decoration: none;
+    color: var(--primary-color);
+    text-shadow: 0.15rem .15rem var(--secondary-color);
+}
+.content-contact {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp {
+    position: relative;
+}
+
+.whatsapp::before {
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+    content: '\f232';
+    position: absolute;  
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 6rem;
+}
+
+.instagram {
+    position: relative;
+}
+
+.instagram::before {
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+    content: '\f16d';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 6rem;  
+}
+
+.end-page {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.end-page img{
+    width: 20%;
+}
+
+.back-to-top{
+    position: fixed;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 2.6rem;
+    right: 5rem;
+    bottom: 2rem;
+    display: flex;
+    width: 5rem;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 0.1rem solid var(--primary-color);
+}
+
+.close-menu {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .intro-content {
+       grid-template-columns: 1fr; 
+       text-align: center;
+       gap: 5rem;
+    }
+
+    .img-intro {
+       justify-content: center;
+    }
+
+    .menu {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .content-nav {
+        min-height: 100vh;
+    }
+    .img-logo{
+        width: 35%;
+    }
+
+    .content-nav,
+    .nav-list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .close-menu-label::after {
+        content: '≡';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: var(--secondary-color);
+        color: var(--primary-color);
+        font-weight: bold;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 2.9rem;
+        width: 3rem;
+        height: 3rem;
+        padding: 0.4rem;
+        cursor: pointer;
+        border-radius: 20%;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+
+    .spacing-hg {
+        display: none;
+    }
+    
+}
